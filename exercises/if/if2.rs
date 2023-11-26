@@ -1,3 +1,11 @@
+/*
+ * @Author: wanfeng 1505991024@qq.com
+ * @Date: 2023-11-16 09:34:27
+ * @LastEditors: wanfeng 1505991024@qq.com
+ * @LastEditTime: 2023-11-23 15:00:17
+ * @FilePath: /rustlings/exercises/if/if2.rs
+ * @Description: 
+ */
 // if2.rs
 //
 // Step 1: Make me compile!
@@ -6,12 +14,17 @@
 // Execute `rustlings hint if2` or use the `hint` watch subcommand for a hint.
 
 pub fn foo_if_fizz(fizzish: &str) -> &str {
-    if fizzish == "fizz" {
-        "foo"
-    } else if fizzish == "fuzz" {
-        "bar"
-    } else {
-        "baz"
+    // if fizzish == "fizz" {
+    //     "foo"
+    // } else if fizzish == "fuzz" {
+    //     "bar"
+    // } else {
+    //     "baz"
+    // }
+    match fizzish {
+        "fizz" => "foo",
+        "fuzz" => "bar",
+        _ => "baz",
     }
 }
 
