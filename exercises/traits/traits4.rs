@@ -1,3 +1,11 @@
+/*
+ * @Author: wanfeng 1505991024@qq.com
+ * @Date: 2023-11-16 09:34:27
+ * @LastEditors: wanfeng 1505991024@qq.com
+ * @LastEditTime: 2023-12-04 12:17:34
+ * @FilePath: /rustlings/exercises/traits/traits4.rs
+ * @Description: 
+ */
 // traits4.rs
 //
 // Your task is to replace the '??' sections so the code compiles.
@@ -6,8 +14,6 @@
 //
 // Execute `rustlings hint traits4` or use the `hint` watch subcommand for a
 // hint.
-
-// I AM NOT DONE
 
 pub trait Licensed {
     fn licensing_info(&self) -> String {
@@ -23,7 +29,15 @@ impl Licensed for SomeSoftware {}
 impl Licensed for OtherSoftware {}
 
 // YOU MAY ONLY CHANGE THE NEXT LINE
-fn compare_license_types(software: ??, software_two: ??) -> bool {
+// fn compare_license_types(software: impl Licensed, software_two: impl Licensed) -> bool {
+//     software.licensing_info() == software_two.licensing_info()
+// }
+
+fn compare_license_types<T, U>(software: T, software_two: U) -> bool 
+where
+    T: Licensed,
+    U: Licensed
+{
     software.licensing_info() == software_two.licensing_info()
 }
 

@@ -1,3 +1,11 @@
+/*
+ * @Author: wanfeng 1505991024@qq.com
+ * @Date: 2023-11-16 09:34:27
+ * @LastEditors: wanfeng 1505991024@qq.com
+ * @LastEditTime: 2023-12-04 12:11:02
+ * @FilePath: /rustlings/exercises/traits/traits3.rs
+ * @Description: 
+ */
 // traits3.rs
 //
 // Your task is to implement the Licensed trait for both structures and have
@@ -8,10 +16,10 @@
 // Execute `rustlings hint traits3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 pub trait Licensed {
-    fn licensing_info(&self) -> String;
+    fn licensing_info(&self) -> String {
+        String::from("Some information")
+    }
 }
 
 struct SomeSoftware {

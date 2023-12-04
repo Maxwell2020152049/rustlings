@@ -1,3 +1,11 @@
+/*
+ * @Author: wanfeng 1505991024@qq.com
+ * @Date: 2023-11-16 09:34:27
+ * @LastEditors: wanfeng 1505991024@qq.com
+ * @LastEditTime: 2023-12-04 12:18:47
+ * @FilePath: /rustlings/exercises/traits/traits5.rs
+ * @Description: 
+ */
 // traits5.rs
 //
 // Your task is to replace the '??' sections so the code compiles.
@@ -6,8 +14,6 @@
 //
 // Execute `rustlings hint traits5` or use the `hint` watch subcommand for a
 // hint.
-
-// I AM NOT DONE
 
 pub trait SomeTrait {
     fn some_function(&self) -> bool {
@@ -30,7 +36,10 @@ impl SomeTrait for OtherStruct {}
 impl OtherTrait for OtherStruct {}
 
 // YOU MAY ONLY CHANGE THE NEXT LINE
-fn some_func(item: ??) -> bool {
+fn some_func<T>(item: T) -> bool 
+where 
+    T: SomeTrait + OtherTrait,
+{
     item.some_function() && item.other_function()
 }
 

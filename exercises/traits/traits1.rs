@@ -1,3 +1,11 @@
+/*
+ * @Author: wanfeng 1505991024@qq.com
+ * @Date: 2023-11-16 09:34:27
+ * @LastEditors: wanfeng 1505991024@qq.com
+ * @LastEditTime: 2023-12-04 12:04:54
+ * @FilePath: /rustlings/exercises/traits/traits1.rs
+ * @Description: 
+ */
 // traits1.rs
 //
 // Time to implement some traits! Your task is to implement the trait
@@ -7,14 +15,16 @@
 // Execute `rustlings hint traits1` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 trait AppendBar {
     fn append_bar(self) -> Self;
 }
 
 impl AppendBar for String {
     // TODO: Implement `AppendBar` for type `String`.
+    fn append_bar(mut self) -> Self {
+        self.push_str("Bar");
+        self
+    }
 }
 
 fn main() {
