@@ -1,3 +1,11 @@
+/*
+ * @Author: wanfeng 1505991024@qq.com
+ * @Date: 2023-11-16 09:34:27
+ * @LastEditors: wanfeng 1505991024@qq.com
+ * @LastEditTime: 2023-12-05 14:55:16
+ * @FilePath: /rustlings/exercises/lifetimes/lifetimes3.rs
+ * @Description: 
+ */
 // lifetimes3.rs
 //
 // Lifetimes are also needed when structs hold references.
@@ -5,11 +13,9 @@
 // Execute `rustlings hint lifetimes3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
-struct Book {
-    author: &str,
-    title: &str,
+struct Book<'a> {
+    author: &'a str,
+    title: &'a str,
 }
 
 fn main() {
