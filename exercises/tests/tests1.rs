@@ -1,3 +1,11 @@
+/*
+ * @Author: wanfeng 1505991024@qq.com
+ * @Date: 2023-11-16 09:34:27
+ * @LastEditors: wanfeng 1505991024@qq.com
+ * @LastEditTime: 2023-12-06 09:46:26
+ * @FilePath: /rustlings/exercises/tests/tests1.rs
+ * @Description: 
+ */
 // tests1.rs
 //
 // Tests are important to ensure that your code does what you think it should
@@ -10,12 +18,10 @@
 // Execute `rustlings hint tests1` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 #[cfg(test)]
 mod tests {
     #[test]
     fn you_can_assert() {
-        assert!();
+        assert!(1 + 1 == 2);
     }
 }
