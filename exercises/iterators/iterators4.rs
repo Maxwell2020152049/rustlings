@@ -1,9 +1,15 @@
+/*
+ * @Author: wanfeng 1505991024@qq.com
+ * @Date: 2023-11-16 09:34:27
+ * @LastEditors: wanfeng 1505991024@qq.com
+ * @LastEditTime: 2023-12-14 16:52:05
+ * @FilePath: /rustlings/exercises/iterators/iterators4.rs
+ * @Description: 
+ */
 // iterators4.rs
 //
 // Execute `rustlings hint iterators4` or use the `hint` watch subcommand for a
 // hint.
-
-// I AM NOT DONE
 
 pub fn factorial(num: u64) -> u64 {
     // Complete this function to return the factorial of num
@@ -15,6 +21,11 @@ pub fn factorial(num: u64) -> u64 {
     // For an extra challenge, don't use:
     // - recursion
     // Execute `rustlings hint iterators4` for hints.
+    if num <= 1 {
+        1
+    } else {
+        num * factorial(num - 1)
+    }
 }
 
 #[cfg(test)]
